@@ -9,6 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface MGHTTP : NSObject
-+ (void) returnWelcomeMessage:(NSString *)name withHandler:(void (^) (NSString *response))handler;
 
 @end

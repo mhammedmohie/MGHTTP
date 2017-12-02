@@ -6,6 +6,20 @@
 	objectVersion = 48;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		FAF578921FD30B5A00F91DD3 /* FatMGHttp */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = FAF578931FD30B5A00F91DD3 /* Build configuration list for PBXAggregateTarget "FatMGHttp" */;
+			buildPhases = (
+				FAF578961FD30B6200F91DD3 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = FatMGHttp;
+			productName = FatMGHttp;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		FAF5788B1FD30AF200F91DD3 /* MGHTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF5788A1FD30AF200F91DD3 /* MGHTTP.m */; };
 		FAF5788C1FD30AF200F91DD3 /* MGHTTP.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FAF578891FD30AF200F91DD3 /* MGHTTP.h */; };
@@ -99,6 +113,10 @@
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
 					};
+					FAF578921FD30B5A00F91DD3 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = FAF578811FD30AF200F91DD3 /* Build configuration list for PBXProject "MGHTTP" */;
@@ -114,9 +132,26 @@
 			projectRoot = "";
 			targets = (
 				FAF578851FD30AF200F91DD3 /* MGHTTP */,
+				FAF578921FD30B5A00F91DD3 /* FatMGHttp */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FAF578961FD30B6200F91DD3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "FAT_LIBRARY_PATH=${PROJECT_DIR}/build/${CONFIGURATION}-fatLib\nxcodebuild -target MGHTTP -configuration ${CONFIGURATION} -sdk iphonesimulator -arch i386 BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\nxcodebuild -target MGHTTP ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\nmkdir -p \"${FAT_LIBRARY_PATH}\"\nlipo -create -output \"${FAT_LIBRARY_PATH}/lib${PROJECT_NAME}.a\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/lib${PROJECT_NAME}.a\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/lib${PROJECT_NAME}.a\"\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/include\" \"${FAT_LIBRARY_PATH}/\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FAF578821FD30AF200F91DD3 /* Sources */ = {
@@ -258,6 +293,24 @@
 			};
 			name = Release;
 		};
+		FAF578941FD30B5A00F91DD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VJM7JRY6GL;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FAF578951FD30B5A00F91DD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VJM7JRY6GL;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -275,6 +328,15 @@
 			buildConfigurations = (
 				FAF578901FD30AF200F91DD3 /* Debug */,
 				FAF578911FD30AF200F91DD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAF578931FD30B5A00F91DD3 /* Build configuration list for PBXAggregateTarget "FatMGHttp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAF578941FD30B5A00F91DD3 /* Debug */,
+				FAF578951FD30B5A00F91DD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

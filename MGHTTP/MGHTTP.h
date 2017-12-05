@@ -8,7 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MGHTTP : NSObject
-+ (void) returnWelcomeMessage:(NSString *)name withHandler:(void (^) (NSString *response))handler;
+typedef enum : NSUInteger {
+    GET,
+    POST,
+    PUT,
+    DELETE,
+} HTTPRequestType;
 
+@interface MGHTTP : NSObject
+
++ (void) get:(NSString *)urlString andResult:(void (^)(NSData *data, NSURLResponse *response, NSError *error ))responseHandler;
+
++ (void) get:(NSString *)urlString andParameters:(NSDictionary *)params andResult:(void (^)(NSData *data, NSURLResponse *response, NSError *error ))responseHandler;
 @end

@@ -23,7 +23,24 @@
 /* Begin PBXBuildFile section */
 		FAF5788B1FD30AF200F91DD3 /* MGHTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF5788A1FD30AF200F91DD3 /* MGHTTP.m */; };
 		FAF5788C1FD30AF200F91DD3 /* MGHTTP.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FAF578891FD30AF200F91DD3 /* MGHTTP.h */; };
+		FAF578CB1FD32B8500F91DD3 /* MGHTTPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF578CA1FD32B8500F91DD3 /* MGHTTPTests.m */; };
+		FAF578CD1FD32B8500F91DD3 /* libMGHTTP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF578861FD30AF200F91DD3 /* libMGHTTP.a */; };
+		FAF578D51FD40D5800F91DD3 /* MGURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF578D41FD40D5800F91DD3 /* MGURLRequest.m */; };
+		FAF578D61FD40D5800F91DD3 /* MGURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF578D41FD40D5800F91DD3 /* MGURLRequest.m */; };
+		FAF578D91FD49E8800F91DD3 /* MGHTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF5788A1FD30AF200F91DD3 /* MGHTTP.m */; };
+		FAF578EA1FD683D500F91DD3 /* NSDictionary+encoding.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF578E91FD683D500F91DD3 /* NSDictionary+encoding.m */; };
+		FAF578EB1FD683D500F91DD3 /* NSDictionary+encoding.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF578E91FD683D500F91DD3 /* NSDictionary+encoding.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FAF578CE1FD32B8500F91DD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAF5787E1FD30AF200F91DD3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAF578851FD30AF200F91DD3;
+			remoteInfo = MGHTTP;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		FAF578841FD30AF200F91DD3 /* CopyFiles */ = {
@@ -42,6 +59,13 @@
 		FAF578861FD30AF200F91DD3 /* libMGHTTP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMGHTTP.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF578891FD30AF200F91DD3 /* MGHTTP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGHTTP.h; sourceTree = "<group>"; };
 		FAF5788A1FD30AF200F91DD3 /* MGHTTP.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGHTTP.m; sourceTree = "<group>"; };
+		FAF578C81FD32B8500F91DD3 /* MGHTTPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MGHTTPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAF578CA1FD32B8500F91DD3 /* MGHTTPTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGHTTPTests.m; sourceTree = "<group>"; };
+		FAF578CC1FD32B8500F91DD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAF578D31FD40D5800F91DD3 /* MGURLRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGURLRequest.h; sourceTree = "<group>"; };
+		FAF578D41FD40D5800F91DD3 /* MGURLRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGURLRequest.m; sourceTree = "<group>"; };
+		FAF578E81FD683D500F91DD3 /* NSDictionary+encoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+encoding.h"; sourceTree = "<group>"; };
+		FAF578E91FD683D500F91DD3 /* NSDictionary+encoding.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+encoding.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +76,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FAF578C51FD32B8500F91DD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAF578CD1FD32B8500F91DD3 /* libMGHTTP.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -59,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				FAF578881FD30AF200F91DD3 /* MGHTTP */,
+				FAF578C91FD32B8500F91DD3 /* MGHTTPTests */,
 				FAF578871FD30AF200F91DD3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				FAF578861FD30AF200F91DD3 /* libMGHTTP.a */,
+				FAF578C81FD32B8500F91DD3 /* MGHTTPTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,8 +110,21 @@
 			children = (
 				FAF578891FD30AF200F91DD3 /* MGHTTP.h */,
 				FAF5788A1FD30AF200F91DD3 /* MGHTTP.m */,
+				FAF578D31FD40D5800F91DD3 /* MGURLRequest.h */,
+				FAF578D41FD40D5800F91DD3 /* MGURLRequest.m */,
+				FAF578E81FD683D500F91DD3 /* NSDictionary+encoding.h */,
+				FAF578E91FD683D500F91DD3 /* NSDictionary+encoding.m */,
 			);
 			path = MGHTTP;
+			sourceTree = "<group>";
+		};
+		FAF578C91FD32B8500F91DD3 /* MGHTTPTests */ = {
+			isa = PBXGroup;
+			children = (
+				FAF578CA1FD32B8500F91DD3 /* MGHTTPTests.m */,
+				FAF578CC1FD32B8500F91DD3 /* Info.plist */,
+			);
+			path = MGHTTPTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -100,6 +147,24 @@
 			productReference = FAF578861FD30AF200F91DD3 /* libMGHTTP.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		FAF578C71FD32B8500F91DD3 /* MGHTTPTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAF578D21FD32B8500F91DD3 /* Build configuration list for PBXNativeTarget "MGHTTPTests" */;
+			buildPhases = (
+				FAF578C41FD32B8500F91DD3 /* Sources */,
+				FAF578C51FD32B8500F91DD3 /* Frameworks */,
+				FAF578C61FD32B8500F91DD3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAF578CF1FD32B8500F91DD3 /* PBXTargetDependency */,
+			);
+			name = MGHTTPTests;
+			productName = MGHTTPTests;
+			productReference = FAF578C81FD32B8500F91DD3 /* MGHTTPTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -114,6 +179,10 @@
 						ProvisioningStyle = Automatic;
 					};
 					FAF578921FD30B5A00F91DD3 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					FAF578C71FD32B8500F91DD3 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
 					};
@@ -133,9 +202,20 @@
 			targets = (
 				FAF578851FD30AF200F91DD3 /* MGHTTP */,
 				FAF578921FD30B5A00F91DD3 /* FatMGHttp */,
+				FAF578C71FD32B8500F91DD3 /* MGHTTPTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FAF578C61FD32B8500F91DD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		FAF578961FD30B6200F91DD3 /* ShellScript */ = {
@@ -159,10 +239,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAF5788B1FD30AF200F91DD3 /* MGHTTP.m in Sources */,
+				FAF578D51FD40D5800F91DD3 /* MGURLRequest.m in Sources */,
+				FAF578EA1FD683D500F91DD3 /* NSDictionary+encoding.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAF578C41FD32B8500F91DD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAF578D91FD49E8800F91DD3 /* MGHTTP.m in Sources */,
+				FAF578CB1FD32B8500F91DD3 /* MGHTTPTests.m in Sources */,
+				FAF578EB1FD683D500F91DD3 /* NSDictionary+encoding.m in Sources */,
+				FAF578D61FD40D5800F91DD3 /* MGURLRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FAF578CF1FD32B8500F91DD3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAF578851FD30AF200F91DD3 /* MGHTTP */;
+			targetProxy = FAF578CE1FD32B8500F91DD3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		FAF5788D1FD30AF200F91DD3 /* Debug */ = {
@@ -311,6 +412,32 @@
 			};
 			name = Release;
 		};
+		FAF578D01FD32B8500F91DD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VJM7JRY6GL;
+				INFOPLIST_FILE = MGHTTPTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gohary.MGHTTPTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FAF578D11FD32B8500F91DD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VJM7JRY6GL;
+				INFOPLIST_FILE = MGHTTPTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gohary.MGHTTPTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -337,6 +464,15 @@
 			buildConfigurations = (
 				FAF578941FD30B5A00F91DD3 /* Debug */,
 				FAF578951FD30B5A00F91DD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAF578D21FD32B8500F91DD3 /* Build configuration list for PBXNativeTarget "MGHTTPTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAF578D01FD32B8500F91DD3 /* Debug */,
+				FAF578D11FD32B8500F91DD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

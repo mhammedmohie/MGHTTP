@@ -12,7 +12,7 @@
 
 
 @implementation MGHTTP
-int current_operation;
+
 
 static NSOperationQueue* requestsFiringQueue;
 

@@ -57,7 +57,7 @@
         XCTAssert(data, @"received data is nil");
         [expectation fulfill];
     }];
-    [self waitForExpectationsWithTimeout:100.0 handler:nil];
+    [self waitForExpectationsWithTimeout:10.0 handler:nil];
 }
 
 - (void)testURLRequestWithNilParameters{
